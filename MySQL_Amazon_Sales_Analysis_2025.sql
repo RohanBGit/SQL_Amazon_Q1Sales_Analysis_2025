@@ -93,12 +93,12 @@ order by total_revenue desc limit 1;
 -- 6. Who are the top 5 customers based on total sales?
 
 select Customer_Name, sum(Total_Sales) as total_sales from sales
-group by Customer_Name
+group by Customer_Name  
 order by total_sales desc limit 5;
 
 -- Olivia Wilson  36170
--- Jane Smith	  31185
--- Emma Clark	  29700
+-- Jane Smith	    31185
+-- Emma Clark	    29700
 -- John Doe	      26870
 -- Emily Johnson  23475
 
@@ -171,9 +171,9 @@ select Category, Product, sold_quantity from cte1
 where ranked = 1
 order by sold_quantity desc;
 
--- Electronics	    Smartwatch	    105
+-- Electronics	    Smartwatch	  105
 -- Footwear	        Running Shoes	72
--- Books	        Book	        69
+-- Books	          Book	        69
 -- Home Appliances	Refrigerator	65
 -- Clothing	        Jeans	        62
 
@@ -194,8 +194,8 @@ from cte1
 order by cancellation_rate desc
 limit 3;                     -- focusing only on the top 3 products with highest popularity & cancellation rate. 
 
--- Headphones	43.8
--- Jeans	    38.7
+-- Headphones	  43.8
+-- Jeans	      38.7
 -- Refrigerator	30.8
 
 -- 15. What is the month-over-month (MoM) sales growth percentage?
